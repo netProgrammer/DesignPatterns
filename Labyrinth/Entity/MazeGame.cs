@@ -1,4 +1,5 @@
 ﻿using Labyrinth.DesignLPatterns.AbstractFactory;
+using Labyrinth.DesignLPatterns.Builder;
 using Labyrinth.Enum;
 
 namespace Labyrinth.Entity
@@ -29,7 +30,8 @@ namespace Labyrinth.Entity
             return maze;
         }*/
 
-        private IMazeFactory _factory;
+        //TODO 2
+        /*private IMazeFactory _factory;
 
         public Maze CreateMaze(IMazeFactory factory)
         {
@@ -53,6 +55,16 @@ namespace Labyrinth.Entity
             room2.SetSide(Direction.West, door);
 
             return maze;
+        }*/
+
+        public Maze CreateMaze(IMazeBuider buider)
+        {
+            buider.BuildMaze();
+            buider.BuildRoom(1);
+            buider.BuildRoom(2);
+            buider.BuildDoor(1,2);
+
+            return buider.GetMaze();
         }
     }
 }
