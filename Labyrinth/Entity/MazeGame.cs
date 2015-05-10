@@ -1,10 +1,12 @@
-﻿using Labyrinth.Enum;
+﻿using Labyrinth.DesignLPatterns.AbstractFactory;
+using Labyrinth.Enum;
 
 namespace Labyrinth.Entity
 {
     public class MazeGame
     {
-        public Maze CreateMaze()
+        //TODO 1
+        /*public Maze CreateMaze()
         {
             Maze maze = new Maze();
             Room room1 = new Room(1);
@@ -22,6 +24,32 @@ namespace Labyrinth.Entity
             room2.SetSide(Direction.North, new Wall());
             room2.SetSide(Direction.East, new Wall());
             room2.SetSide(Direction.South, new Wall());
+            room2.SetSide(Direction.West, door);
+
+            return maze;
+        }*/
+
+        private IMazeFactory _factory;
+
+        public Maze CreateMaze(IMazeFactory factory)
+        {
+            _factory = factory;
+            Maze maze = _factory.MakeMaze();
+            Room room1 = _factory.MakeRoom(1);
+            Room room2 = _factory.MakeRoom(2);
+            Door door = _factory.MakeDoor(room1, room2);
+
+            maze.AddRoom(room1);
+            maze.AddRoom(room2);
+
+            room1.SetSide(Direction.North, _factory.MakeWall());
+            room1.SetSide(Direction.East, door);
+            room1.SetSide(Direction.South, _factory.MakeWall());
+            room1.SetSide(Direction.West, _factory.MakeWall());
+
+            room2.SetSide(Direction.North, _factory.MakeWall());
+            room2.SetSide(Direction.East, _factory.MakeWall());
+            room2.SetSide(Direction.South, _factory.MakeWall());
             room2.SetSide(Direction.West, door);
 
             return maze;
