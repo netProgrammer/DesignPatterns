@@ -8,6 +8,7 @@ namespace Labyrinth
         {
             Console.WriteLine("Hello World");
             Console.ReadLine();
+            
         }
     }
 }

@@ -1,6 +1,6 @@
-namespace Labyrinth
+namespace Labyrinth.Enum
 {
-	enum Direction{
+    public enum Direction{
 		North,
 		South,
 		East,
