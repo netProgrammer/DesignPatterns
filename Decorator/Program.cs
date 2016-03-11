@@ -27,22 +27,22 @@ namespace Decorator
 
     class Component : IComponent
     {
-        public virtual void DoSomething()
+        public void DoSomething()
         {
            Console.WriteLine("Component");    
         }
     }
 
-    abstract class Decorator : Component
+    abstract class Decorator : IComponent
     {
-        private Component _component;
+        private IComponent _component;
 
-        public void SetComponent(Component component)
+        public void SetComponent(IComponent component)
         {
             _component = component;
         }
 
-        public override void DoSomething()
+        public virtual void DoSomething()
         {
             if (_component != null)
             {
