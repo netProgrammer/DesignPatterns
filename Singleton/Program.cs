@@ -30,12 +30,21 @@ namespace SingletonPattern
             get
             {
                 Console.WriteLine("We already have a instance now. Use it.");
+                if (SingletonInstance == null)
+                {
+                    lock (lockObject)
+                    {
+                        if (SingletonInstance == null)
+                            SingletonInstance = new Singleton();
+                    }
+                }
                 return SingletonInstance;
             }
         }
 
-        private static readonly Singleton SingletonInstance = new Singleton();
+        private static volatile Singleton SingletonInstance;
         private int _numberOfInstances;
+        private static object lockObject= new Object();
 
         private Singleton()
         {
