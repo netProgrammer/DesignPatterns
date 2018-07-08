@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{399E782E-6E81-42C5-8034-84EE3A238483}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "PrototypePattern\PrototypePattern.csproj", "{2F033A49-41A4-4245-81C3-5912996B6C45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{399E782E-6E81-42C5-8034-84EE3A238483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{399E782E-6E81-42C5-8034-84EE3A238483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{399E782E-6E81-42C5-8034-84EE3A238483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F033A49-41A4-4245-81C3-5912996B6C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F033A49-41A4-4245-81C3-5912996B6C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F033A49-41A4-4245-81C3-5912996B6C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F033A49-41A4-4245-81C3-5912996B6C45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
