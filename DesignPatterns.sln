@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactoryPattern", "Sim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactoryPattern", "AbstractFactoryPattern\AbstractFactoryPattern.csproj", "{807C6F9E-D0B9-4E63-B640-21ABD3F919F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{551C1DD1-5606-493B-88EC-5B997984D4DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{807C6F9E-D0B9-4E63-B640-21ABD3F919F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{807C6F9E-D0B9-4E63-B640-21ABD3F919F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{807C6F9E-D0B9-4E63-B640-21ABD3F919F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551C1DD1-5606-493B-88EC-5B997984D4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551C1DD1-5606-493B-88EC-5B997984D4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551C1DD1-5606-493B-88EC-5B997984D4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551C1DD1-5606-493B-88EC-5B997984D4DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
